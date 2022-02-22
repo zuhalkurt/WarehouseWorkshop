@@ -16,17 +16,18 @@ namespace Warehouse
             
         }
         
-        public void AddStock(Item item, int stockAmount)
+        public void AddStock(Item item, int stock)
         {
-            Stock.Add(new Stock(item, stockAmount));
+            Stock.Add(new Stock(item, stock));
         }
 
         public void PrintInventory()
         {
-            Console.WriteLine("Inventory of warehouse: ");
+            Console.WriteLine($"Inventory of warehouse {Name}: ");
 
             foreach(Stock stockItem in Stock)
             {
+                
                 Console.WriteLine($"   {stockItem.Item.Name}: {stockItem.Amount}");
             }
         }
