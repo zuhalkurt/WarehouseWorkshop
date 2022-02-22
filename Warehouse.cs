@@ -21,6 +21,10 @@ namespace Warehouse
             Stock.Add(new Stock(item, stock));
         }
 
+        public void SellStock(Item item, int stock){
+            Stock.Remove(new Stock(item, stock));
+        }
+
         public void PrintInventory()
         {
             Console.WriteLine($"Inventory of warehouse {Name}: ");
